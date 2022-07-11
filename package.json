@@ -24,8 +24,7 @@
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
     "init-msw": "msw init src/",
-    "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=14a504e71f9b"
+    "test-storybook": "test-storybook"
   },
   "private": true,
   "dependencies": {
