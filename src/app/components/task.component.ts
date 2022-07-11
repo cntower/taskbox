@@ -17,6 +17,7 @@ import { Task } from '../models/task.model';
           [defaultChecked]="task?.state === 'TASK_ARCHIVED'"
           name="checked-{{ task?.id }}"
           id="checked-{{ task?.id }}"
+          style="background: red;"
         />
         <span class="checkbox-custom" (click)="onArchive(task.id)"></span>
       </label>
@@ -32,7 +33,7 @@ import { Task } from '../models/task.model';
           id="title-{{ task?.id }}"
           name="title-{{ task?.id }}"
           placeholder="Input title"
-          style="text-overflow: ellipsis; background: red;"
+          style="text-overflow: ellipsis;"
         />
       </label>
       <button
