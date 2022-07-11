@@ -7,18 +7,28 @@ import { Task } from '../models/task.model';
 export const actions = {
   ARCHIVE_TASK: 'ARCHIVE_TASK',
   PIN_TASK: 'PIN_TASK',
+  ERROR: 'APP_ERROR',
 };
 
 export class ArchiveTask {
   static readonly type = actions.ARCHIVE_TASK;
 
-  constructor(public payload: string) {}
+  constructor(public payload: string) {
+  }
 }
 
 export class PinTask {
   static readonly type = actions.PIN_TASK;
 
-  constructor(public payload: string) {}
+  constructor(public payload: string) {
+  }
+}
+
+export class AppError {
+  static readonly type = actions.ERROR;
+
+  constructor(public payload: boolean) {
+  }
 }
 
 // The initial state of our store when the app loads.
@@ -81,6 +91,7 @@ export class TasksState {
       );
     }
   }
+
   // Triggers the archiveTask action, similar to redux
   @Action(ArchiveTask)
   archiveTask(
